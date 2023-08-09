@@ -39,8 +39,7 @@ class _Printed_SheetState extends State<Printed_Sheet> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return  Scaffold(
         appBar: AppBar(
           title: const Text("Printed Screen"),
           backgroundColor: Colors.pink,
@@ -109,7 +108,7 @@ class _Printed_SheetState extends State<Printed_Sheet> {
             ],
           ),
         ),
-      ),
-    );
+      );
+    
   }
 }

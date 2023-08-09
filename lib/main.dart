@@ -6,8 +6,8 @@ import 'const.dart';
 
 void main() {
   runApp(const MaterialApp(
-    debugShowCheckedModeBanner: false,
-    home: const Employeequali_sp(),
+    debugShowCheckedModeBanner:false,
+    home: Employeequali_sp(),
   ));
 }
 
@@ -159,7 +159,7 @@ class _Employeequali_spState extends State<Employeequali_sp> {
                   child: DropdownButton(
                       value: qualificationSelectedvalue,
                       isExpanded: true,
-                      icon: Icon(Icons.arrow_drop_down_sharp),
+                      icon: const Icon(Icons.arrow_drop_down_sharp),
                       items: qualification
                           .map<DropdownMenuItem<String>>((String quavalue) {
                         return DropdownMenuItem<String>(
@@ -211,13 +211,13 @@ class _Employeequali_spState extends State<Employeequali_sp> {
                           await EmployeeShared.savestring(
                               Password, passwordcontroller.text);
                           await EmployeeShared.savestring(
-                              Qualification, genderDropdownvalue ?? "");
+                              Qualification, qualificationSelectedvalue ?? "");
                           await EmployeeShared.savestring(
                               Percentage, percentagecontroller.text);
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Printed_Sheet()));
+                                  builder: (context) => const Printed_Sheet()));
                         },
                         child: const Text(
                           "Print",
